@@ -1,7 +1,12 @@
 // on crée un container à partir du Dockerfile
-docker build -t [nom de l'image] -f Dockerfile .
-// on lance l'éxécution du container en créant un volume pour synchroniser le projet en local avec un dossier du container
-docker run -v [chemin du projet]:[chemin de l'emplacement du dossier qui se synchronisera] --name [nom du container] -id [nom de l'image]
+
+docker build -t img\_exemple -f Dockerfile .
+
+// on lance l'exécution du container en créant un volume pour synchroniser le projet en local avec un dossier du container
+
+docker run -v ~/Documents/test\_docker:/home/savecontainer --name cont\_exemple -id img\_exemple
+
 //on entre dans le container
-docker exec -it [nom container] /bin/bash
+
+docker exec -it cont\_exemple /bin/bash
 
