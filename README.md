@@ -1,4 +1,5 @@
 // on crée un container à partir du Dockerfile
+
 docker build -t img\_exemple -f Dockerfile .
 
 // on lance l'exécution du container en créant un volume pour synchroniser le projet en local avec un dossier du container
