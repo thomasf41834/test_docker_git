@@ -8,5 +8,5 @@ RUN apt-get install -y curl
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
 # utile pour composer
-RUN apt-get install -y php-mbstring php-dom
+RUN apt-get install -y php-mbstring php-dom git
 
