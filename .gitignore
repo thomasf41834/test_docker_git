@@ -1,0 +1,2 @@
+# ignore le dossier vendor de l'appli laravel
+my_app/vendor/*
