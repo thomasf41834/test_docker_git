@@ -39,6 +39,6 @@ class test_date extends Command
     {
 	    echo date('d/m/y')."\n";
 	    sleep(5);
-	    date('d/m/y')."\n";
+	    echo date('d/m/y')."\n";
     }
 }
