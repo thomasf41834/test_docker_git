@@ -9,5 +9,8 @@ On entre dans le container
 # test de l'environnement 
 On se rend dans le dossier synchronisé avec notre projet en local puis dans notre application laravel  
 `cd home/savecontainer/my_app`  
+On met composer à jour  
+`cd /home/savecontainer/my_app`  
+`composer update`  
 On lance la commande qui affiche la date  
 `php artisan test_date`
