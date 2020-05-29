@@ -7,3 +7,6 @@ RUN apt-get install -y curl
 # php-gd php-mbstring php-zip php-opcache php-xml curl
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
+# utile pour composer
+RUN apt-get install -y php-mbstring php-dom
+
