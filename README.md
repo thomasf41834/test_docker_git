@@ -7,7 +7,7 @@ On entre dans le container
 `docker exec -it cont_exemple /bin/bash`  
 
 # test de l'environnement 
-On se rend dans le dossier synchronisé avec notre projet en local puis dans notre application laravel
+On se rend dans le dossier synchronisé avec notre projet en local puis dans notre application laravel 
 `cd home/savecontainer/my_app` 
 On lance la commande qui affiche la date 
 `php artisan test_date`
