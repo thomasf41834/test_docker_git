@@ -6,9 +6,9 @@ On lance l'exécution du container en créant un volume pour synchroniser le pro
 On entre dans le container  
 `docker exec -it cont_exemple /bin/bash`  
 
-# test de l'environnement 
+# configuration de l'environnement 
 On se rend dans le dossier synchronisé avec notre projet en local puis dans notre application laravel  
-`cd home/savecontainer/my_app`  
+`cd /home/savecontainer/my_app`  
 On met composer à jour  
 `composer update`  
 On lance la commande qui affiche la date  
