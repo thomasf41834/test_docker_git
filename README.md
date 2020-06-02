@@ -17,10 +17,8 @@ On lance la commande qui affiche la date
 # création de la base de données mysql
 `docker build -t mysql -f Dockerfile .`  
 `docker run -v ~/Documents/test_docker/env_mysql:/home/savecontainer --name cont_mysql --env="MYSQL_ROOT_PASSWORD=password" -id mysql`  
-
-`docker inspect cont_mysql | grep IPAddress` --> "IPAddress": "172.17.0.2",  
-
-`mysql -u root -ppassword -h 172.17.0.2 -P 3306`  
+`docker inspect cont_mysql | grep IPAddress` --> adresse_ip  
+`mysql -u root -ppassword -h `adresse_ip` -P 3306`  
 
 # initialisation de la base de données
 `CREATE DATABASE db_test;`  
