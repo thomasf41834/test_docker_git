@@ -1,4 +1,6 @@
 # initialisation 
+On se rend dans le projet git
+
 On crée un container à partir du Dockerfile  
 `docker build -t img_exemple -f Dockerfile .`  
 On lance l'exécution du container en créant un volume pour synchroniser le projet en local avec un dossier du container  
@@ -15,8 +17,11 @@ On lance la commande qui affiche la date
 `php artisan test_date`
 
 # création de la base de données mysql
+On se rend dans le dossier où se trouve le dockerfile  
+`cd env_mysql`
+
 `docker build -t mysql -f Dockerfile .`  
-`docker run -v ~/Documents/test_docker/env_mysql:/home/savecontainer --name cont_mysql --env="MYSQL_ROOT_PASSWORD=password" -id mysql`  
+`docker run -v `_chemin du projet git_`/env_mysql:/home/savecontainer --name cont_mysql --env="MYSQL_ROOT_PASSWORD=password" -id mysql`  
 On recherche l'adresse ip sur laquelle tourne notre container mysql  
 `docker inspect cont_mysql | grep IPAddress` --> adresse_ip  
 On se connecte au mysql  
