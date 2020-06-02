@@ -15,22 +15,21 @@ On lance la commande qui affiche la date
 `php artisan test_date`
 
 # création de la base de données mysql
-`docker build -t mysql -f Dockerfile .`
-`docker run -v ~/Documents/test_docker/env_mysql:/home/savecontainer --name cont_mysql --env="MYSQL_ROOT_PASSWORD=password" -id mysql`
+`docker build -t mysql -f Dockerfile .`  
+`docker run -v ~/Documents/test_docker/env_mysql:/home/savecontainer --name cont_mysql --env="MYSQL_ROOT_PASSWORD=password" -id mysql`  
 
-`docker inspect cont_mysql | grep IPAddress` --> "IPAddress": "172.17.0.2",
+`docker inspect cont_mysql | grep IPAddress` --> "IPAddress": "172.17.0.2",  
 
-`mysql -u root -ppassword -h 172.17.0.2 -P 3306`
+`mysql -u root -ppassword -h 172.17.0.2 -P 3306`  
 
 # initialisation de la base de données
-`CREATE DATABASE db_test;`
-`USE db_test;`
-``CREATE TABLE utilisateur
+`CREATE DATABASE db_test;`  
+`USE db_test;`  
+`CREATE TABLE utilisateur  
 (
     id INT PRIMARY KEY NOT NULL,
     nom VARCHAR(100),
     prenom VARCHAR(100),
     email VARCHAR(255)
-);``
-
+);`  
 `INSERT INTO utilisateur VALUES ('1','ferrino', 'thomas', 'empail@hg.com');`
