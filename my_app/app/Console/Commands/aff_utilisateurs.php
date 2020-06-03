@@ -38,14 +38,14 @@ class aff_utilisateurs extends Command
      */
 function handle()
     {
-	//$results = DB::connection('mysql')->table('utilisateurs')->get();
-	$this->db = DB::connection('mysql')->getPdo();
-	$sth = $this->db->prepare("SELECT * FROM utilisateurs");
-	$sth->execute();
-	$results = $sth->fetch(\PDO::FETCH_NAMED);
+	$results = DB::connection('mysql')->table('utilisateur')->get();
+	//$this->db = DB::connection('mysql')->getPdo();
+	//$sth = $this->db->prepare("SELECT * FROM utilisateur");
+	//$sth->execute();
+	//$results = $sth->fetch(\PDO::FETCH_NAMED);
 	echo "les utilisateurs sont : \n";
-	foreach ($results as $res) {
-		echo "nom : ".$res->nom."prenom : ".$res->prenom."email : ".$res->email."\n";
+	foreach ($results as $res) {	
+		echo "nom : ".$res->nom." prenom : ".$res->prenom." email : ".$res->email."\n";
 	} 
     }
 }
