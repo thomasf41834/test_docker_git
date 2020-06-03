@@ -5,6 +5,11 @@ On crée un container à partir du Dockerfile
 `docker build -t img_exemple -f Dockerfile .`  
 On lance l'exécution du container en créant un volume pour synchroniser le projet en local avec un dossier du container  
 `docker run -v `_chemin du projet git_`:/home/savecontainer --name cont_exemple -id img_exemple`  
+
+Attention : Si vous avez un conflit avec le nom que vous avez indiqué pour le container :  
+stopper le container ayant ce nom s'il est en exécution : `docker stop cont_exemple`  
+supprimer ce container : `docker rm cont_exemple`
+
 On entre dans le container  
 `docker exec -it cont_exemple /bin/bash`  
 
