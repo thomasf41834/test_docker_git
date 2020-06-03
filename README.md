@@ -25,11 +25,11 @@ On lance la commande qui affiche la date
 On se rend dans le dossier où se trouve le dockerfile  
 `cd env_mysql`
 
-`docker build -t mysql -f Dockerfile .`  
-`docker run -v `_chemin du projet git_`/env_mysql:/home/savecontainer --name cont_mysql --env="MYSQL_ROOT_PASSWORD=password" -id mysql`  
+`docker build -t mariadb -f Dockerfile .`  
+`docker run -v `_chemin du projet git_`/env_mysql:/home/savecontainer --name cont_mariadb --env="MYSQL_ROOT_PASSWORD=password" -id mariadb`  
 On recherche l'adresse ip sur laquelle tourne notre container mysql  
-`docker inspect cont_mysql | grep IPAddress` --> adresse_ip  
-On se connecte au mysql  
+`docker inspect cont_mariadb | grep IPAddress` --> adresse_ip  
+On se connecte au container mariadb  
 `mysql -u root -ppassword -h `adresse_ip` -P 3306`  
 
 # initialisation de la base de données
