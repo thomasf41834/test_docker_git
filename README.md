@@ -42,4 +42,7 @@ On se connecte au container mariadb
     prenom VARCHAR(100),
     email VARCHAR(255)
 );`  
-`INSERT INTO utilisateur VALUES ('1','ferrino', 'thomas', 'empail@hg.com');`
+`INSERT INTO utilisateur VALUES ('1','navet', 'eric', 'empail@hg.com'),('2','azerty', 'thomas', 'azscff@hg.com'),('3','caouet', 'theo', 'azedcvb@hg.com');`
+
+On retourne dans l'application laravel et on lance la commande qui affiche les utilisateurs  
+`php artisan aff_utilisateurs`
